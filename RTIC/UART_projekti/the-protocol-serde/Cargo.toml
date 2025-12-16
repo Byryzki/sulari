@@ -1,0 +1,12 @@
+[package]
+name = "the-protocol-serde"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+corncobs = "0.1.4"
+the-protocol = { path = "../the-protocol" }
+serde = { version = "1.0.228", default-features = false, features = [
+    "serde_derive",
+] }
+ssmarshal = { version = "1.0.0", default-features = false }

@@ -1,0 +1,17 @@
+[package]
+name = "the-protocol"
+version = "0.1.0"
+authors = ["Henri Lunnikivi <henri.lunnikivi@tuni.fi>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[features]
+# Getting the current time should be available on host only, since the device does not have direct
+# access to NTP clock.
+host = []
+
+[dependencies]
+chrono = { version = "0.4.42", default-features = false }
+serde = { version = "1.0.228", default-features = false, features = [
+    "serde_derive",
+] }
